@@ -1,27 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>List</title>
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-        <h2>Player Stats</h2>
-        <table border ="1">
-            <tr>
-                <th>Player Name</th>
-                <th>Hand total</th>
-                <th>Status</th>
-            </tr>
-            <tr>
-                <td>Alen</td>
-                <td>21</td>
-                <td>Winner</td>
-            </tr>
-            <tr>
-                <td>Borek</td>
-                <td>18</td>
-                <td>Still Playing</td>
-            </tr>
-        </table>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding assignement</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="main.js" defer></script>
+  </head>
+  <body>
+    <div id="blackjack-table">
+      <h1>Welcome to the Blackjack Game</h1>
+      <div class="container" id="player-info">
+        <p id="player-name">
+          Player: Allen
+          <svg
+            class="edit-icon"
+            id="edit-button"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            width="15"
+            height="15"
+          >
+            <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+            <path
+              fill="currentColor"
+              d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"
+            />
+          </svg>
+        </p>
+        <div class="form-container" id="edit-form">
+          <h3>Edit User Name</h3>
+          <input type="text" id="name-input" placeholder="Enter new name" />
+          <button id="save-button">Save</button>
+        </div>
+      </div>
+    
+      <div id="dealer-container">
+        <h2>Dealer's Cards</h2>
+        <div id="dealer-cards"></div>
+        <p id="dealer-sum">Sum: 0</p>
+      </div>
+      <div id="card-container">
+        <h2>Your Cards:</h2>
+        <div id="player-cards"></div>
+        <p id="player-sum">Sum: 0</p>
+      </div>
+      <p id="message">Click "Start Game" to begin!</p>
+      <button id="start-game">Start Game</button>
+      <button id="hit" disabled>Hit</button>
+      <button id="stand" disabled>Stand</button>
+    </div>
+  </body>
 </html>
