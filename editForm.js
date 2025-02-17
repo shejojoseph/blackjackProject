@@ -1,3 +1,6 @@
+/* Generated with assistance from ChatGPT to understand the 
+    flow of control between html css and javascript and the usage of jquery */
+    
 export function enableEdit() {
   $("#edit-form").show();
   const currentName = $("#player-name")

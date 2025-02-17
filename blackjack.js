@@ -28,11 +28,11 @@ export function stand(){
   }
   renderGame();
   if(dealerSum > 21 || playerSum > dealerSum){
-    displayMessage("Player Wins!! Pay the Winners!!!");
+    displayMessage("🎉 Player Wins! Pay the Winners!");
   } else if(playerSum < dealerSum){
-    displayMessage("House Wins!");
+    displayMessage("💰 House Wins!");
   } else{
-    displayMessage("Push");
+    displayMessage("🤝 Push (Tie Game)");
   }
   endGame();
 
@@ -78,16 +78,17 @@ const renderGame = () => {
 
 const displayGameStatus = () =>{
   if(playerSum === 21){
-    displayMessage("Blackjack! Player wins!");
+    displayMessage("🎉 Blackjack! Player wins!");
     endGame();
   } else if(playerSum > 21){
-    displayMessage("Oops! Player Busted");
+    displayMessage("🔥 Oops! Player Busted");
     endGame();
   } else{
-    displayMessage("Hit or Stand?");
+    displayMessage("🃏 Hit or Stand?");
   }
 };
 
+// Generated with help of Chatgpt
 const updateCards = (selector, cards) => {
   $(selector).html(
     cards
